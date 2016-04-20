@@ -10,19 +10,9 @@ angular.module('appRoutes', []).
                    controller: 'MainController'
                })
 
-               .when('/json', {
-                   templateUrl: 'views/json.html',
-                   controller: 'JsonController'
-               })
-
-               .when('/marlinadmin', {
-                   templateUrl: 'views/marlinadmin.html',
-                   controller: 'MarlinAdminController'
-               })
-
-               .when('/marlin', {
-                   templateUrl: 'views/marlin.html',
-                   controller: 'MarlinController'
+               .when('/foo', {
+                   templateUrl: 'views/foo.html',
+                   controller: 'FooController'
                })
 
                $locationProvider.html5Mode(true);

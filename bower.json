@@ -5,8 +5,8 @@
         "bootstrap": "latest",
         "font-awesome": "latest",
         "animate.css": "latest",
-        "angular": "latest",
         "jquery": ">= 1.9.1",
+        "angular": "latest",
         "angular-route": "latest",
         "angular-sanitize": "latest",
         "angular-bootstrap": "latest"

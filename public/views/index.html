@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <base href="/">
 
-    <title>MapRDB</title>
+    <title>Angular Express Base App</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
 
     <!-- JS -->
-    <script src="libs/angular/angular.min.js"></script>
-    <script src="libs/angular-route/angular-route.min.js"></script>
-    <script src="libs/angular-sanitize/angular-sanitize.min.js"></script>
-    <script src="libs/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="libs/angular/angular.js"></script>
+    <script src="libs/angular-route/angular-route.js"></script>
+    <script src="libs/angular-sanitize/angular-sanitize.js"></script>
+    <script src="libs/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <!-- CSS
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -22,16 +22,12 @@
 
     <!-- ANGULAR CUSTOM -->
     <script src="js/controllers/MainCtrl.js"></script>
-    <script src="js/controllers/JsonCtrl.js"></script>
-    <script src="js/services/JsonService.js"></script>
-    <script src="js/controllers/MarlinCtrl.js"></script>
-    <script src="js/services/MarlinService.js"></script>
-    <script src="js/controllers/MarlinAdminCtrl.js"></script>
-    <script src="js/services/MarlinAdminService.js"></script>
+    <script src="js/controllers/FooCtrl.js"></script>
+    <script src="js/services/FooService.js"></script>
     <script src="js/appRoutes.js"></script>
     <script src="js/app.js"></script>
   </head>
-  <body ng-app="maprdbApp" ng-controller="MainController">
+  <body ng-app="mainApp" ng-controller="MainController">
 
     <nav class="navbar navbar-default navbar-fixed-top" role=navigation>
       <div class="navbar-header">
@@ -41,20 +37,22 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">MapRDB</a>
+        <a class="navbar-brand" href="/">Hello</a>
       </div>
       <div id="main-navbar-menu" class="navbar-collapse collapse" aria-expanded="false">
         <ul class="nav nav-justified">
-          <li><a href="/binary">BINARY</a></li>
-          <li><a href="/json">JSON</a></li>
-          <li dropdown on-toggle="toggled(open)">
-            <a href id="simple-dropdown" dropdown-toggle>
-              MARLIN<span class="caret">
+          <li><a href="/foo">Foo</a></li>
+          <li><a href="/bar">Bar</a></li>
+          <li uib-dropdown on-toggle="toggled(open)">
+            <a href id="simple-dropdown" uib-dropdown-toggle>
+              List<span class="caret">
             </a>
-            <ul class="dropdown-menu" aria-labelledby="simple-dropdown">
-              <li><a href="/marlinadmin">Manage Streams</a></li>
-              <li><a href="/marlin">Producer and Consumer</a></li>
-              <li><a href="#">Consumer</a></li>
+            <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+              <li role="menuitem"><a href="#">Action</a></li>
+              <li role="menuitem"><a href="#">Another action</a></li>
+              <li role="menuitem"><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li role="menuitem"><a href="#">Separated link</a></li>
             </ul>
           </li>
         </ul>

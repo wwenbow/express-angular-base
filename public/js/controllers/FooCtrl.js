@@ -1,9 +1,9 @@
-angular.module('JsonCtrl', []).controller('JsonController', function($scope, Json) {
+angular.module('FooCtrl', []).controller('FooController', function($scope, Foo) {
     $scope.table = {};
     $scope.alerts = [];
 
     $scope.createTable = function() {
-        Json.createtable($scope.table).
+        Foo.createtable($scope.table).
             success(function(data, status, headers, config) {
             console.log("success create");
             addAlert('success', data);
@@ -16,7 +16,7 @@ angular.module('JsonCtrl', []).controller('JsonController', function($scope, Jso
 
     $scope.deleteTable = function() {
         console.log($scope.table);
-        Json.deletetable($scope.table).
+        Foo.deletetable($scope.table).
             success(function(data, status, headers, config) {
             console.log("successful delete");
             addAlert('success', data);
@@ -28,7 +28,7 @@ angular.module('JsonCtrl', []).controller('JsonController', function($scope, Jso
     };
 
     $scope.postRecord = function() {
-        Json.postrecord($scope.table).
+        Foo.postrecord($scope.table).
             success(function(data, status, headers, config) {
             console.log("success create record");
             addAlert('success', data);
@@ -40,7 +40,7 @@ angular.module('JsonCtrl', []).controller('JsonController', function($scope, Jso
     };
 
     $scope.scanTable = function() {
-        Json.getall($scope.table).
+        Foo.getall($scope.table).
             success(function(data, status, headers, config) {
             console.log("success scan");
             var message = "";

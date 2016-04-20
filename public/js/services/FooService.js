@@ -1,4 +1,4 @@
-angular.module('JsonService', []).factory('Json', ['$http', function($http) {
+angular.module('FooService', []).factory('Foo', ['$http', function($http) {
 
     return {
         // call to get all nerds
