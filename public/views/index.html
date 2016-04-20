@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <base href="/">
+
+    <title>MapRDB</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+
+    <!-- JS -->
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/angular-route/angular-route.min.js"></script>
+    <script src="libs/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="libs/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <!-- CSS
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    -->
+
+    <!-- ANGULAR CUSTOM -->
+    <script src="js/controllers/MainCtrl.js"></script>
+    <script src="js/controllers/JsonCtrl.js"></script>
+    <script src="js/services/JsonService.js"></script>
+    <script src="js/controllers/MarlinCtrl.js"></script>
+    <script src="js/services/MarlinService.js"></script>
+    <script src="js/controllers/MarlinAdminCtrl.js"></script>
+    <script src="js/services/MarlinAdminService.js"></script>
+    <script src="js/appRoutes.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="maprdbApp" ng-controller="MainController">
+
+    <nav class="navbar navbar-default navbar-fixed-top" role=navigation>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-menu" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">MapRDB</a>
+      </div>
+      <div id="main-navbar-menu" class="navbar-collapse collapse" aria-expanded="false">
+        <ul class="nav nav-justified">
+          <li><a href="/binary">BINARY</a></li>
+          <li><a href="/json">JSON</a></li>
+          <li dropdown on-toggle="toggled(open)">
+            <a href id="simple-dropdown" dropdown-toggle>
+              MARLIN<span class="caret">
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="simple-dropdown">
+              <li><a href="/marlinadmin">Manage Streams</a></li>
+              <li><a href="/marlin">Producer and Consumer</a></li>
+              <li><a href="#">Consumer</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </nav>
+
+    <div ng-view></div>
+  </body>
+</html>

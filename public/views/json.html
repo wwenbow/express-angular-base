@@ -1,0 +1,78 @@
+<div class="container-fluid" style="padding-top: 25px">
+<div class="jumbotron">
+  <h1>Json Table</h1>
+  <tabset>
+  <tab heading="Create Table">
+  <form class="form-inline" ng-submit="createTable()">
+    <h4>Input Table Path to Create</h4>
+    <div class="form-group">
+      <input type="text"
+             class="form-control"
+             placeholder="Path to table"
+             ng-model="table.name"></input>
+    </div>
+    <button type="submit" class="btn btn-primary">Create!</button>
+  </form>
+  </tab>
+  <tab heading="Delete Table">
+  <h4>Input Table Path to Delete</h4>
+  <form class="form-inline" ng-submit="deleteTable()">
+    <div class="form-group">
+      <input type="text"
+             class="form-control"
+             placeholder="Path to Table"
+             ng-model="table.name"></input>
+    </div>
+    <button type="submit" class="btn btn-primary">Delete!</button>
+  </form>
+  </tab>
+  <tab heading="Scan Table">
+  <h4>Input Table Path to Scan</h4>
+  <form class="form-inline" ng-submit="scanTable()">
+    <div class="form-group">
+      <input type="text"
+             class="form-control"
+             placeholder="Path to Table"
+             ng-model="table.name"></input>
+    </div>
+    <button type="submit" class="btn btn-primary">Scan!</button>
+  </form>
+  </tab>
+  <tab heading="Add Document">
+  <h4>Give Document</h4>
+  <form id="docform" ng-submit="postRecord()">
+    <div class="form-group">
+      <h5>Table Path</h5>
+      <input type="text"
+             class="form-control"
+             placeholder="Path to Table"
+             ng-model="table.name"></input>
+      </br>
+      <h5>Table Path</h5>
+      <input type="text"
+             class="form-control"
+             placeholder="Document ID"
+             ng-model="table.id"></input>
+      </br>
+      <h5>Document</h5>
+      <textarea class="form-control"
+                rows="8"
+                placeholder="Document"
+                ng-model="table.document">Json Dcoument</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  </tab>
+  </tabset>
+
+  </br>
+  <alert ng-repeat="alert in alerts"
+         type="{{alert.type}}"
+         dismiss-on-timeout="60000"
+         close="closeAlert($index)">
+  <div ng-bind-html="alert.msg"></div>
+  </alert>
+
+
+</div>
+</div>

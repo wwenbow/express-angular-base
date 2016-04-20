@@ -1,0 +1,14 @@
+{
+    "name": "movie-rec-demo",
+    "version": "1.0.0",
+    "dependencies": {
+        "bootstrap": "latest",
+        "font-awesome": "latest",
+        "animate.css": "latest",
+        "angular": "latest",
+        "jquery": ">= 1.9.1",
+        "angular-route": "latest",
+        "angular-sanitize": "latest",
+        "angular-bootstrap": "latest"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "movie-rec-demo",
+    "main": "server.js",
+    "dependencies": {
+        "bower" : "latest",
+        "express" : "~4.5.1",
+        "body-parser" : "~1.4.2",
+        "method-override" : "~2.0.2"
+    },
+    "scripts": {
+        "start": "node server.js",
+        "postinstall" : "./node_modules/bower/bin/bower install"
+    }
+}
